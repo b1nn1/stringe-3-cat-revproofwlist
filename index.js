@@ -1061,7 +1061,7 @@ async function handleModalSubmit(interaction) {
     }
 
     await interaction.reply({
-      content: `_ _ \n_ _   𓏸  ྀི༷   __     ⎯⎯__⎯໑      **ꪮrdꫀ͟r    cꪮmplꫀ͟te**    𓈒.  Ი ᰍ ྀི༷   <a:002_bus:1450606718081044622> \n_ _\n\n-#  _ _       <:emoji_28:1450558336822153407>  ⠀𓏵⠀**purchased**　⎯　${receiptData.purchased}⠀⠀__𓎢𓎡__\n-#  _ _　         ﹒ .  ྀི 𓈒݂     **summary** : ${receiptData.summary}     ๑ 𓈒\n\n-#  _ _        <a:5_green:1450607639401730059>     𓏵   **changes**   ${receiptData.changes}        ⑅   ♬͟    𓏻𓈒 \n-#  _ _            𓐇۪ ᣟ݂ᚐ⠀⠀**payment**　⎯　${receiptData.payment}⠀𓈈𓈒.⠀ ✿ᩧ\n\n-#  _ _        <a:y_03:1450607636801257493>  ⠀𓏵⠀**ordered on**　⎯　${orderedDate}⠀⠀__𓎢𓎡__\n-#  _ _　         ﹒ .  ྀི 𓈒݂      **completed on** : ${completedDate}     ๑ 𓈒\n\n> -#  _ _          ۫ ִ⑅  𓈒     ** review   in   __this   ticket__**       ${receiptData.userField}      <a:000aDNS:1448751246587461853>`
+      content: `_ _ \n_ _   𓏸  ྀི༷   __     ⎯⎯__⎯໑      **ꪮrdꫀ͟r    cꪮmplꫀ͟te**    𓈒.  Ი ᰍ ྀི༷   <a:002_bus:1450606718081044622> \n_ _\n\n-#  _ _       <:emoji_28:1450558336822153407>  ⠀𓏵⠀**purchased**　⎯　${receiptData.purchased}⠀⠀__𓎢𓎡__\n-#  _ _　         ﹒ .  ྀི 𓈒݂     **summary** : ${receiptData.summary}     ๑ 𓈒\n\n-#  _ _        <a:5_green:1450607639401730059>     𓏵   **changes**   ${receiptData.changes}        ⑅   ♬͟    𓏻𓈒 \n-#  _ _            𓐇۪ ᣟ݂ᚐ⠀⠀**payment**　⎯　${receiptData.payment}⠀𓈈𓈒.⠀ ✿ᩧ\n\n-#  _ _        <a:y_03:1450607636801257493>  ⠀𓏵⠀**ordered on**　⎯　${orderedDate}⠀⠀__𓎢𓎡__\n-#  _ _　         ﹒ .  ྀི 𓈒݂      **completed on** : ${completedDate}     ๑ 𓈒\n\n> -#  _ _          ۫ ִ⑅  𓈒     ** review   in   __this   ticket__**       <${receiptData.userField}>      <a:000aDNS:1448751246587461853>`
     })
 
     ticketData.delete(`${interaction.channelId}_receipt_data`)
@@ -1433,7 +1433,7 @@ async function handleButton(interaction) {
 
     const userInput = new TextInputBuilder()
       .setCustomId("user")
-      .setLabel("user")
+      .setLabel("user id")
       .setStyle(TextInputStyle.Short)
       .setRequired(true)
 
