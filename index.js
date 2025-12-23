@@ -568,6 +568,10 @@ async function handleCommand(interaction) {
   if (cmd === "waitlist") {
     const user = interaction.options.getUser("user")
     const plan = interaction.options.getString("plan")
+    // Check if user has admin role
+    if (!interaction.member.roles.cache.has(process.env.ADMIN_ROLE_ID)) {
+      return interaction.reply({ content: "❌ You don't have permission to use this command!", ephemeral: true })
+    }
 
     // Message 1: Header images
     await sendV2Message(channelId, {
@@ -625,7 +629,7 @@ async function handleCommand(interaction) {
           components: [
             {
               type: 10,
-              content: `\n-# _ _ 　     　  𓈒.  Ი ᰍ𓏽ཾ 　꒰꒰𓈒　 __**bꪮught**__ 　${plan}　 ˳♡͝   ׁ　 \n-# _ _ 　   　<a:teasie:1450607647182164211> 𓈒　 ✿ᩧ𓈒ֺּׅ　𓈒.     noted 　𓈒. 교묘한 취급 　𓈒 𓏸   ♬͟  𓈒　　　　　　　　　_ _`
+              content: `\n-# _ _ 　     　  𓈒.  Ი ᰍ𓏽ཾ 　꒰꒰𓈒　 __**bꪮught**__ 　${plan}　 ˳♡͝   ׁ　 \n-# _ _ 　   　 <a:teasie:1450607647182164211>  𓈒　 ✿ᩧ𓈒ֺּׅ　𓈒.     noted 　𓈒. 교묘한 취급 　𓈒 𓏸   ♬͟  𓈒　　　　　　　　　_ _`
             },
             { type: 14 },
             {
@@ -678,6 +682,10 @@ async function handleCommand(interaction) {
 
   // ==== TICKET SETUP HANDLER ====
   if (cmd === "ticket-setup") {
+    // Check if user has admin role
+    if (!interaction.member.roles.cache.has(process.env.ADMIN_ROLE_ID)) {
+      return interaction.reply({ content: "❌ You don't have permission to use this command!", ephemeral: true })
+    }
     await interaction.deferReply({ ephemeral: true })
 
     const channelToPost = interaction.channel
@@ -1012,7 +1020,7 @@ async function handleModalSubmit(interaction) {
                 type: 2,
                 label: " 　 ֯ ♡︎ ྀི༷.　 cꪮnfirm 　 .ᣟ݂ ݂ ౿",
                 emoji: { id: "1450607631449198592", name: "c_flower", animated: true },
-                custom_id: "ticket_confirm"
+                custom_id: "ticket_confirm_admin"
               }]
             }
           ]
@@ -1091,11 +1099,37 @@ async function handleModalSubmit(interaction) {
 async function handleButton(interaction) {
   const ticketChannelId = interaction.channelId
   const data = ticketData.get(ticketChannelId)
+  // ==== ADMIN-ONLY BUTTON CHECK ====
+  const adminOnlyButtons = [
+    "ticket_confirm", 
+    "ticket_confirm_admin", 
+    "ticket_noted", 
+    "ticket_cancel_btn", 
+    "ticket_receipt_btn", 
+    "receipt_continue",
+    "ticket_done", 
+    "ticket_close", 
+    "ticket_lock",
+    "waitlist_processing", 
+    "waitlist_w4r", 
+    "waitlist_done"
+  ]
 
+  if (adminOnlyButtons.includes(interaction.customId)) {
+    console.log(`Admin button clicked: ${interaction.customId} by ${interaction.user.tag}`)
+    console.log(`Has admin role? ${interaction.member.roles.cache.has(process.env.ADMIN_ROLE_ID)}`)
+
+    if (!interaction.member.roles.cache.has(process.env.ADMIN_ROLE_ID)) {
+      return interaction.reply({ content: "❌ You don't have permission to use this button!", ephemeral: true })
+    }
+  }
   // ==== TICKET CONFIRM BUTTON (ADMIN) ====
   if (interaction.customId === "ticket_confirm" || interaction.customId === "ticket_confirm_admin") {
     if (!data) {
       return interaction.reply({ content: "❌ No ticket data found!", ephemeral: true })
+    }
+    if (!interaction.member.roles.cache.has(process.env.ADMIN_ROLE_ID)) {
+      return interaction.reply({ content: "❌ You don't have permission to use this command!", ephemeral: true })
     }
 
     const { mop } = data
@@ -1104,7 +1138,7 @@ async function handleButton(interaction) {
     // Determine MOP message based on payment method
     if (mop.includes("nitro") || mop.includes("deco") || mop.includes("dcr") || mop.includes("nbst") || mop.includes("nba")) {
       mopMessage = {
-        content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__nitrꪮ__　ᵒʳ　𓈒.dꫀ͟co**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　<a:teasie:1421374111074222102>　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　gift　link　in　dms\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　must　be　**lgl**　or　have　**warr**\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ not　taking　unstable　links\n_ _",
+        content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__nitrꪮ__　ᵒʳ　𓈒.dꫀ͟co**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1421374111074222102> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　gift　link　in　dms\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　must　be　**lgl**　or　have　**warr**\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ not　taking　unstable　links\n_ _",
         components: [{
           type: 1,
           components: [{
@@ -1122,7 +1156,7 @@ async function handleButton(interaction) {
         components: [
           {
             type: 10,
-            content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__cᥲ͟ຣh__　𓈒.ᥲ͟pp**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　<a:teasie:1421374111074222102>　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　[__balance__](https://cash.app/$6Iives)　only\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　only　send　**emoji**　notes\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__receipt__\n_ _"
+            content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__cᥲ͟ຣh__　𓈒.ᥲ͟pp**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1421374111074222102> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　[__balance__](https://cash.app/$6Iives)　only\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　only　send　**emoji**　notes\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__receipt__\n_ _"
           },
           {
             type: 1,
@@ -1138,7 +1172,7 @@ async function handleButton(interaction) {
       }
     } else if (mop.includes("pp") || mop.includes("paypal")) {
       mopMessage = {
-        content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__pᥲ͟y__　𓈒.pᥲ͟l**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　<a:teasie:1421374111074222102>　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　[fnf](https://www.paypal.me/stingedup)　only\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　only　send　**emoji**　notes\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__receipt__\n_ _",
+        content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__pᥲ͟y__　𓈒.pᥲ͟l**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1421374111074222102> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　[fnf](https://www.paypal.me/stingedup)　only\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　only　send　**emoji**　notes\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__receipt__\n_ _",
         components: [{
           type: 1,
           components: [{
@@ -1152,7 +1186,7 @@ async function handleButton(interaction) {
       }
     } else if (mop.includes("rbx") || mop.includes("roblox") || mop.includes("robux")) {
       mopMessage = {
-        content: " _ _\n_ _　 　　  𓈒  ᩧ𓐇   **__rbꪎ__　𓈒.pᥲ͟yment**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　<a:teasie:1421374111074222102>　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     find　[amt](https://www.roblox.com/games/2571614859/what#!/store)　here\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　if　not　**listed**,　wait\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__gp__\n_ _",
+        content: " _ _\n_ _　 　　  𓈒  ᩧ𓐇   **__rbꪎ__　𓈒.pᥲ͟yment**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1421374111074222102> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     find　[amt](https://www.roblox.com/games/2571614859/what#!/store)　here\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　if　not　**listed**,　wait\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__gp__\n_ _",
         components: [{
           type: 1,
           components: [{
@@ -1166,7 +1200,7 @@ async function handleButton(interaction) {
       }
     } else if (mop.includes("review") || mop.includes("free") || mop.includes("rvw") || mop.includes("rev") || mop.includes("long rev") || mop.includes("med rev") || mop.includes("short rev")) {
       mopMessage = {
-        content: `_ _　 　　  𓈒  ᩧ𓐇   **__review__　𓈒.pᥲ͟yment**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　<a:teasie:1421374111074222102>　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　　　 ᜴ׁ༷   　for　free　services　**only**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     no　review　=　ban　+　deleted\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　all　reviews　**in**　ticket\n_ _`,
+        content: `_ _　 　　  𓈒  ᩧ𓐇   **__review__　𓈒.pᥲ͟yment**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1421374111074222102> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　　　 ᜴ׁ༷   　for　free　services　**only**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     no　review　=　ban　+　deleted\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　all　reviews　**in**　ticket\n_ _`,
         components: [{
           type: 1,
           components: [{
@@ -1249,7 +1283,7 @@ async function handleButton(interaction) {
               type: 10,
               content: `\n
 -# _ _ 　     　  𓈒.  Ი ᰍ𓏽ཾ 　꒰꒰𓈒　 __**bꪮught**__ 　${order}　 ˳♡͝   ׁ　 
--# _ _ 　   　<a:teasie:1450607647182164211> 𓈒　 ✿ᩧ𓈒ֺּׅ　𓈒.     noted 　𓈒. 教묘한 취급 　𓈒 𓏸   ♬͟  𓈒　　　　　　　　　_ _`
+-# _ _ 　   　 <a:teasie:1450607647182164211>  𓈒　 ✿ᩧ𓈒ֺּׅ　𓈒.     noted 　𓈒. 教묘한 취급 　𓈒 𓏸   ♬͟  𓈒　　　　　　　　　_ _`
             },
             { type: 14 },
             {
@@ -1566,6 +1600,10 @@ async function handleButton(interaction) {
 
   // ==== DONE BUTTON ====
   if (interaction.customId === "ticket_done") {
+    // Check if user has admin role
+    if (!interaction.member.roles.cache.has(process.env.ADMIN_ROLE_ID)) {
+      return interaction.reply({ content: "❌ You don't have permission to use this command!", ephemeral: true })
+    }
     await interaction.deferReply({ ephemeral: true })
 
     // Generate transcript
@@ -1613,6 +1651,10 @@ async function handleButton(interaction) {
 
   // ==== CLOSE BUTTON ====
   if (interaction.customId === "ticket_close") {
+    // Check if user has admin role
+    if (!interaction.member.roles.cache.has(process.env.ADMIN_ROLE_ID)) {
+      return interaction.reply({ content: "❌ You don't have permission to use this command!", ephemeral: true })
+    }
     await interaction.deferReply({ ephemeral: true })
 
     // Generate transcript
@@ -1657,6 +1699,10 @@ async function handleButton(interaction) {
 
   // ==== LOCK BUTTON ====
   if (interaction.customId === "ticket_lock") {
+    // Check if user has admin role
+    if (!interaction.member.roles.cache.has(process.env.ADMIN_ROLE_ID)) {
+      return interaction.reply({ content: "❌ You don't have permission to use this command!", ephemeral: true })
+    }
     const ticketOpener = ticketData.get(ticketChannelId)?.user
     if (ticketOpener) {
       await interaction.channel.permissionOverwrites.edit(ticketOpener.id, {
