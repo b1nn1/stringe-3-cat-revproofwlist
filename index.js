@@ -167,6 +167,10 @@ async function handleCommand(interaction) {
 
   // ==== TICKET SETUP HANDLER ====
   if (cmd === "ticket-setup") {
+    // Check if user has admin role
+    if (!interaction.member.roles.cache.has(process.env.ADMIN_ROLE_ID)) {
+      return interaction.reply({ content: "❌ You don't have permission to use this command!", ephemeral: true })
+    }
     await interaction.deferReply({ ephemeral: true })
 
     const channelToPost = interaction.channel
@@ -783,6 +787,9 @@ async function handleCommand(interaction) {
 async function handleSelectMenu(interaction) {
   // Waitlist status update
   if (interaction.customId === "wait_status") {
+    if (!interaction.member.roles.cache.has(process.env.ADMIN_ROLE_ID)) {
+      return interaction.reply({ content: "❌ You don't have permission to use this!", ephemeral: true })
+    }
     const selected = interaction.values[0]
     const messageId = interaction.message.id
     const channelId = interaction.channelId
