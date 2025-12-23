@@ -115,12 +115,19 @@ const rest = new REST({ version: "10" }).setToken(process.env.TOKEN)
   console.log("✅ Commands registered")
 })()
 
-client.once("ready", async () => {
-  console.log(`✅ Logged in as ${client.user.tag}`);
+// Set bot status when ready
+client.once("ready", () => {
+  console.log(`✅ Logged in as ${client.user.tag}`)
+
+  // Set status
   client.user.setPresence({
-    status: "online",
-    activities: [{ name: "a biohzrd bot", type: 3 }],
-  });
+    activities: [{
+      name: "a biohzrd bot",
+      type: 0 // PLAYING
+    }],
+    status: "dnd" // online, idle, dnd, invisible
+  })
+})
 
 // ==== HELPER: Send Components V2 Message ====
 async function sendV2Message(channelId, payload) {
