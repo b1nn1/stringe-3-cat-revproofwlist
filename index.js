@@ -379,7 +379,7 @@ async function handleCommand(interaction) {
       components: [
         {
           type: 12,
-          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
+          items: [{ media: { url: "https://cdn.discordapp.com/attachments/1442939881356656780/1453226089030877244/stars_in_embed_whitecolor_1764079802351.gif?ex=694cadc3&is=694b5c43&hm=c7ace40c785d09e964ec43fa4f30e4c204b995c2d26da3b7e0bfc6b2e8a13a26&" } }]
         },
         {
           type: 17,
@@ -461,7 +461,7 @@ async function handleCommand(interaction) {
           },
           {
             type: 12,
-            items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
+            items: [{ media: { url: "https://cdn.discordapp.com/attachments/1442939881356656780/1453226089030877244/stars_in_embed_whitecolor_1764079802351.gif?ex=694cadc3&is=694b5c43&hm=c7ace40c785d09e964ec43fa4f30e4c204b995c2d26da3b7e0bfc6b2e8a13a26&" } }]
           }
         ]
       })
@@ -548,7 +548,7 @@ async function handleCommand(interaction) {
           },
           {
             type: 12,
-            items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
+            items: [{ media: { url: "https://cdn.discordapp.com/attachments/1442939881356656780/1453226089030877244/stars_in_embed_whitecolor_1764079802351.gif?ex=694cadc3&is=694b5c43&hm=c7ace40c785d09e964ec43fa4f30e4c204b995c2d26da3b7e0bfc6b2e8a13a26&" } }]
           }
         ]
       })
@@ -648,7 +648,7 @@ async function handleCommand(interaction) {
       components: [
         {
           type: 12,
-          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
+          items: [{ media: { url: "https://cdn.discordapp.com/attachments/1442939881356656780/1453226089030877244/stars_in_embed_whitecolor_1764079802351.gif?ex=694cadc3&is=694b5c43&hm=c7ace40c785d09e964ec43fa4f30e4c204b995c2d26da3b7e0bfc6b2e8a13a26&" } }]
         },
         {
           type: 1,
@@ -1301,7 +1301,7 @@ async function handleButton(interaction) {
       components: [
         {
           type: 12,
-          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
+          items: [{ media: { url: "https://cdn.discordapp.com/attachments/1442939881356656780/1453226089030877244/stars_in_embed_whitecolor_1764079802351.gif?ex=694cadc3&is=694b5c43&hm=c7ace40c785d09e964ec43fa4f30e4c204b995c2d26da3b7e0bfc6b2e8a13a26&" } }]
         },
         {
           type: 1,
@@ -1384,7 +1384,7 @@ async function handleButton(interaction) {
         },
         {
           type: 12,
-          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
+          items: [{ media: { url: "https://cdn.discordapp.com/attachments/1442939881356656780/1453226089030877244/stars_in_embed_whitecolor_1764079802351.gif?ex=694cadc3&is=694b5c43&hm=c7ace40c785d09e964ec43fa4f30e4c204b995c2d26da3b7e0bfc6b2e8a13a26&" } }]
         }
       ]
     })
