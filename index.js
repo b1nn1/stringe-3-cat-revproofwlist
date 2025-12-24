@@ -379,7 +379,7 @@ async function handleCommand(interaction) {
       components: [
         {
           type: 12,
-          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694422d5&is=6942d155&hm=5ef1bd00963db097dd7ca599d660115553763d305aabd7e042cd7770c0f5161b&=&width=794&height=42" } }]
+          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
         },
         {
           type: 17,
@@ -461,7 +461,7 @@ async function handleCommand(interaction) {
           },
           {
             type: 12,
-            items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694422d5&is=6942d155&hm=5ef1bd00963db097dd7ca599d660115553763d305aabd7e042cd7770c0f5161b&=&width=794&height=42" } }]
+            items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
           }
         ]
       })
@@ -529,7 +529,7 @@ async function handleCommand(interaction) {
             type: 9,
             components: [{
               type: 10,
-              content: `_ _\n-# _ _　　　　 　. 𓈒ֺּׅ𓏽ཾ  　 ꒰ ᩧ 　𓈈𓈒.　[.𝒮ꫀ͟r͟v͟iɕꫀ](https://discord.com/channels/1441570514752508056/1441599685516197959)　fꪮr 　${user}　ᣟ݂ 𓏵  <:d_clovermsg:1426976812117786726> \n-# _ _ 　　　　⎯__⎯⎯ 　__　‌‌‌݂۫ **r♡͝tiᥒg̲　recꫀ͟ived** 　__:__ 　${rating} 　*/*　**1O**　　   𓈒\n-# _ _ 　　　　　<a:c_star:1450607626240131112>　 𓈒ׄ  𑅛　[thꫀir rꫀviꫀw](${reviewlink}) 　__ᣟ݂ for__ 　${plan} 　     ♬͟  𓈒 𓏸  ྀི༷　𓈒. _ _`
+              content: `_ _\n-# _ _　　　　 　. 𓈒ֺּׅ𓏽ཾ  　 ꒰ ᩧ 　𓈈𓈒.　[.𝒮ꫀ͟r͟v͟iɕꫀ](https://discord.com/channels/1441570514752508056/1441599685516197959)　fꪮr 　${user}　ᣟ݂ 𓏵  <:d_clovermsg:1450606703669153863> \n-# _ _ 　　　　⎯__⎯⎯ 　__　‌‌‌݂۫ **r♡͝tiᥒg̲　recꫀ͟ived** 　__:__ 　${rating} 　*/*　**1O**　　   𓈒\n-# _ _ 　　　　　<a:c_star:1450607626240131112>　 𓈒ׄ  𑅛　[thꫀir rꫀviꫀw](${reviewlink}) 　__ᣟ݂ for__ 　${plan} 　     ♬͟  𓈒 𓏸  ྀི༷　𓈒. _ _`
             }],
             accessory: {
               type: 11,
@@ -548,7 +548,7 @@ async function handleCommand(interaction) {
           },
           {
             type: 12,
-            items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694422d5&is=6942d155&hm=5ef1bd00963db097dd7ca599d660115553763d305aabd7e042cd7770c0f5161b&=&width=794&height=42" } }]
+            items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
           }
         ]
       })
@@ -629,7 +629,7 @@ async function handleCommand(interaction) {
           components: [
             {
               type: 10,
-              content: `\n-# _ _ 　     　  𓈒.  Ი ᰍ𓏽ཾ 　꒰꒰𓈒　 __**bꪮught**__ 　${plan}　 ˳♡͝   ׁ　 \n-# _ _ 　   　 <a:teasie:1450607647182164211>  𓈒　 ✿ᩧ𓈒ֺּׅ　𓈒.     noted 　𓈒. 교묘한 취급 　𓈒 𓏸   ♬͟  𓈒　　　　　　　　　_ _`
+              content: `\n-# _ _ 　     　  𓈒.  Ი ᰍ𓏽ཾ 　꒰꒰𓈒　 __**bꪮught**__ 　${plan}　 ˳♡͝   ׁ　 \n-# _ _ 　   　 <a:teasie:1450607647182164211>   𓈒　 ✿ᩧ𓈒ֺּׅ　𓈒.     noted 　𓈒. 교묘한 취급 　𓈒 𓏸   ♬͟  𓈒　　　　　　　　　_ _`
             },
             { type: 14 },
             {
@@ -648,7 +648,7 @@ async function handleCommand(interaction) {
       components: [
         {
           type: 12,
-          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694422d5&is=6942d155&hm=5ef1bd00963db097dd7ca599d660115553763d305aabd7e042cd7770c0f5161b&=&width=794&height=42" } }]
+          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
         },
         {
           type: 1,
@@ -1075,7 +1075,7 @@ async function handleModalSubmit(interaction) {
     }
 
     await interaction.reply({
-      content: `_ _ \n_ _   𓏸  ྀི༷   __     ⎯⎯__⎯໑      **ꪮrdꫀ͟r    cꪮmplꫀ͟te**    𓈒.  Ი ᰍ ྀི༷   <a:002_bus:1450606718081044622> \n_ _\n\n-#  _ _       <:emoji_28:1450558336822153407>  ⠀𓏵⠀**purchased**　⎯　${receiptData.purchased}⠀⠀__𓎢𓎡__\n-#  _ _　         ﹒ .  ྀི 𓈒݂     **summary** : ${receiptData.summary}     ๑ 𓈒\n\n-#  _ _        <a:5_green:1450607639401730059>     𓏵   **changes**   ${receiptData.changes}        ⑅   ♬͟    𓏻𓈒 \n-#  _ _            𓐇۪ ᣟ݂ᚐ⠀⠀**payment**　⎯　${receiptData.payment}⠀𓈈𓈒.⠀ ✿ᩧ\n\n-#  _ _        <a:y_03:1450607636801257493>  ⠀𓏵⠀**ordered on**　⎯　${orderedDate}⠀⠀__𓎢𓎡__\n-#  _ _　         ﹒ .  ྀི 𓈒݂      **completed on** : ${completedDate}     ๑ 𓈒\n\n> -#  _ _          ۫ ִ⑅  𓈒     ** review   in   __this   ticket__**       <${receiptData.userField}>      <a:000aDNS:1448751246587461853>`
+      content: `_ _ \n_ _   𓏸  ྀི༷   __     ⎯⎯__⎯໑      **ꪮrdꫀ͟r    cꪮmplꫀ͟te**    𓈒.  Ი ᰍ ྀི༷   <a:002_bus:1450606718081044622> \n_ _\n\n-#  _ _       <:emoji_28:1450558336822153407>  ⠀𓏵⠀**purchased**　⎯　${receiptData.purchased}⠀⠀__𓎢𓎡__\n-#  _ _　         ﹒ .  ྀི 𓈒݂     **summary** : ${receiptData.summary}     ๑ 𓈒\n\n-#  _ _        <a:5_green:1450607639401730059>     𓏵   **changes**   ${receiptData.changes}        ⑅   ♬͟    𓏻𓈒 \n-#  _ _            𓐇۪ ᣟ݂ᚐ⠀⠀**payment**　⎯　${receiptData.payment}⠀𓈈𓈒.⠀ ✿ᩧ\n\n-#  _ _        <a:y_03:1450607636801257493>  ⠀𓏵⠀**ordered on**　⎯　${orderedDate}⠀⠀__𓎢𓎡__\n-#  _ _　         ﹒ .  ྀི 𓈒݂      **completed on** : ${completedDate}     ๑ 𓈒\n\n> -#  _ _          ۫ ִ⑅  𓈒     ** review   in   __this   ticket__**       <@${receiptData.userField}>      <a:000aDNS:1448751246587461853>`
     })
 
     ticketData.delete(`${interaction.channelId}_receipt_data`)
@@ -1138,7 +1138,7 @@ async function handleButton(interaction) {
     // Determine MOP message based on payment method
     if (mop.includes("nitro") || mop.includes("deco") || mop.includes("dcr") || mop.includes("nbst") || mop.includes("nba")) {
       mopMessage = {
-        content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__nitrꪮ__　ᵒʳ　𓈒.dꫀ͟co**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1421374111074222102> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　gift　link　in　dms\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　must　be　**lgl**　or　have　**warr**\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ not　taking　unstable　links\n_ _",
+        content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__nitrꪮ__　ᵒʳ　𓈒.dꫀ͟co**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　  <a:teasie:1450607647182164211>  　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　gift　link　in　dms\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　must　be　**lgl**　or　have　**warr**\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ not　taking　unstable　links\n_ _",
         components: [{
           type: 1,
           components: [{
@@ -1156,7 +1156,7 @@ async function handleButton(interaction) {
         components: [
           {
             type: 10,
-            content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__cᥲ͟ຣh__　𓈒.ᥲ͟pp**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1421374111074222102> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　[__balance__](https://cash.app/$6Iives)　only\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　only　send　**emoji**　notes\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__receipt__\n_ _"
+            content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__cᥲ͟ຣh__　𓈒.ᥲ͟pp**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　  <a:teasie:1450607647182164211>  　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　[__balance__](https://cash.app/$6Iives)　only\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　only　send　**emoji**　notes\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__receipt__\n_ _"
           },
           {
             type: 1,
@@ -1172,7 +1172,7 @@ async function handleButton(interaction) {
       }
     } else if (mop.includes("pp") || mop.includes("paypal")) {
       mopMessage = {
-        content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__pᥲ͟y__　𓈒.pᥲ͟l**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1421374111074222102> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　[fnf](https://www.paypal.me/stingedup)　only\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　only　send　**emoji**　notes\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__receipt__\n_ _",
+        content: "_ _\n_ _　 　　  𓈒  ᩧ𓐇   **__pᥲ͟y__　𓈒.pᥲ͟l**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1450607647182164211> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     send　[fnf](https://www.paypal.me/stingedup)　only\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　only　send　**emoji**　notes\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__receipt__\n_ _",
         components: [{
           type: 1,
           components: [{
@@ -1186,7 +1186,7 @@ async function handleButton(interaction) {
       }
     } else if (mop.includes("rbx") || mop.includes("roblox") || mop.includes("robux")) {
       mopMessage = {
-        content: " _ _\n_ _　 　　  𓈒  ᩧ𓐇   **__rbꪎ__　𓈒.pᥲ͟yment**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1421374111074222102> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     find　[amt](https://www.roblox.com/games/2571614859/what#!/store)　here\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　if　not　**listed**,　wait\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__gp__\n_ _",
+        content: " _ _\n_ _　 　　  𓈒  ᩧ𓐇   **__rbꪎ__　𓈒.pᥲ͟yment**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1450607647182164211> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　 ᜴ׁ༷   　sending　w/o　conf　=　**voided**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     find　[amt](https://www.roblox.com/games/2571614859/what#!/store)　here\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　if　not　**listed**,　wait\n-# _ _　　⎯໑     　  ྀི༷　𓐇۪ ᣟ݂ᚐ send　ss　of　__gp__\n_ _",
         components: [{
           type: 1,
           components: [{
@@ -1200,7 +1200,7 @@ async function handleButton(interaction) {
       }
     } else if (mop.includes("review") || mop.includes("free") || mop.includes("rvw") || mop.includes("rev") || mop.includes("long rev") || mop.includes("med rev") || mop.includes("short rev")) {
       mopMessage = {
-        content: `_ _　 　　  𓈒  ᩧ𓐇   **__review__　𓈒.pᥲ͟yment**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1421374111074222102> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　　　 ᜴ׁ༷   　for　free　services　**only**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     no　review　=　ban　+　deleted\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　all　reviews　**in**　ticket\n_ _`,
+        content: `_ _　 　　  𓈒  ᩧ𓐇   **__review__　𓈒.pᥲ͟yment**　  𓈒ֺּׅ ♡ ྀི༷\n-# _ _　 <a:teasie:1450607647182164211> 　𓈒. ✿ᩧ　__wait__　for　ray　to　confirm\n-# _ _　　　 ᜴ׁ༷   　for　free　services　**only**\n> \n-# _ _  　　　　⑅.　ִִ𓈒     no　review　=　ban　+　deleted\n-# _ _　<a:c_star:1450607626240131112>　 ♬𓈒　all　reviews　**in**　ticket\n_ _`,
         components: [{
           type: 1,
           components: [{
@@ -1301,7 +1301,7 @@ async function handleButton(interaction) {
       components: [
         {
           type: 12,
-          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694422d5&is=6942d155&hm=5ef1bd00963db097dd7ca599d660115553763d305aabd7e042cd7770c0f5161b&=&width=794&height=42" } }]
+          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
         },
         {
           type: 1,
@@ -1384,7 +1384,7 @@ async function handleButton(interaction) {
         },
         {
           type: 12,
-          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694422d5&is=6942d155&hm=5ef1bd00963db097dd7ca599d660115553763d305aabd7e042cd7770c0f5161b&=&width=794&height=42" } }]
+          items: [{ media: { url: "https://media.discordapp.net/attachments/1441600012894212127/1444354909855289404/stars_in_embed_whitecolor_1764079802351.gif?ex=694c0bd5&is=694aba55&hm=adb5ac41d6ca1a305192742d3fc86b839101fcbcb1e900ad1316b3470d25c299&width=794&height=42&" } }]
         }
       ]
     })
