@@ -1008,8 +1008,8 @@ async function handleModalSubmit(interaction) {
                 style: 2,
                 type: 2,
                 emoji: { id: "1450606715731968161", name: "002_clover", animated: true },
-                disabled: false,
-                custom_id: "ticket_confirm_admin"
+                disabled: true,
+                custom_id: "ticket_confirm_accessory"
               }
             },
             { type: 14 },
